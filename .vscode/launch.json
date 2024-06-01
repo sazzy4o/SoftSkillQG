@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Debug Train Neg",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/neg/A_train_question_generator.py",
+            "console": "integratedTerminal",
+            "args": ["separate_models","5e-4","context"],
+            "env": {
+                "HF_DATASETS_OFFLINE": "1",
+                "TRANSFORMERS_OFFLINE": "1",
+                "HF_DATASETS_CACHE": "/scratch/vonderoh/datasets/",
+                "TRANSFORMERS_CACHE": "/scratch/vonderoh/transformers-cache/",
+                "WANDB_MODE": "offline",
+
+                // Prevents Pytorch crash when debugger displays tensors, not sure why ¯\_(ツ)_/¯
+                "TASK_QUEUE_ENABLE": "0", 
+                // Make torch errors easier to debug (slighly slower)
+                // "CUDA_LAUNCH_BLOCKING": "1",
+            },
+            "justMyCode": true
+        }
+    ]
+}

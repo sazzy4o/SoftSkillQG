@@ -1,0 +1,6 @@
+slurm*
+models_data/
+models/
+models.old/
+logs/
+scores.csv
