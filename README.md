@@ -1,5 +1,7 @@
 # SoftSkillQG
 
+Tool for automatically generating skill targeted reading comprehension questions. 
+
 ## Setup/install
 The code was made to run on the Compute Canada (Gentoo Linux) environment. Some modifications may be required to run in other environments
 
